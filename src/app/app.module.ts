@@ -9,6 +9,8 @@ import { OnInitComponent } from './on-init/on-init.component';
 import { CardsGHComponent } from './cards-gh/cards-gh.component';
 import { LoginComponent } from './login/login.component'
 import { FormsModule } from '@angular/forms';
+import { LoginService } from './login/login.service';
+import { HomeTextComponent } from './home-text/home-text.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     GetOnClickComponent,
     OnInitComponent,
     CardsGHComponent,
-    LoginComponent
+    LoginComponent,
+    HomeTextComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
