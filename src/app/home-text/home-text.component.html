@@ -1,1 +1,13 @@
-<p>home-text works!</p>
+<div class="home-div">
+  <div *ngIf="!logeado; else logearse" >
+    <h2>Si quieres probar las peticiones, tienes que estar logueado</h2>
+  </div>
+  <ng-template #logearse class="home-div">
+    <h2>Muchas gracias por logearse!!</h2>
+    <div>
+      <h3>
+        Ahora puedes acceder a las distintas peticiones de Los repositorios!!!
+      </h3>
+    </div>
+  </ng-template>
+</div>

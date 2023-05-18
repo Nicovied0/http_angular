@@ -15,10 +15,11 @@ export class LoginComponent {
     const email = form.value.email
     const password = form.value.password
     console.log(email + password)
-    this.loginService.login(email,password)
+    this.loginService.login(email, password)
   }
-  consoleToken(){
+  consoleToken() {
     console.log(this.loginService.getIdToken())
+    console.log(this.loginService.isAuthenticated())
   }
 
 }

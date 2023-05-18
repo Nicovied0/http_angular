@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component'
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './login/login.service';
 import { HomeTextComponent } from './home-text/home-text.component';
+import { LoginGuardian } from './login/login-guardian.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { HomeTextComponent } from './home-text/home-text.component';
     FormsModule
 
   ],
-  providers: [LoginService],
+  providers: [LoginService, LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,32 +1,37 @@
-<form
-  #f="ngForm"
-  (ngSubmit)="f.form.valid && login(f)"
-  class="m-5 d-flex align-items-baseline justify-content-center flex-column"
->
-  <div class="m-3 d-flex flex-column">
-    <label class="col-sm-2 col-form-label"> Email </label>
-    <input
-      type="text"
-      name="email"
-      placeholder="Email"
-      class="form-control"
-      required
-      ngModel
-    />
-  </div>
-  <div class="m-3 d-flex flex-column">
-    <label class="col-sm-2 col-form-label"> Contraseña </label>
-    <input
-      name="password"
-      type="password"
-      placeholder="Contraseña"
-      class="form-control c-black"
-      required
-      ngModel
-    />
-  </div>
-  <div class="m-3 d-flex flex-column">
-    <button class="btn btn-primary">Login</button>
-    <button (click)="consoleToken()">2</button>
-  </div>
-</form>
+<div class="home-div">
+  <form
+    #f="ngForm"
+    (ngSubmit)="f.form.valid && login(f)"
+    class="m-5 d-flex align-items-baseline justify-content-center flex-column"
+  >
+    <div class="m-3 d-flex flex-column">
+      <label class="col-sm-2 col-form-label"> Email </label>
+      <input
+        type="text"
+        name="email"
+        placeholder="Email"
+        class="form-control"
+        required
+        ngModel
+      />
+    </div>
+    <div class="m-3 d-flex flex-column">
+      <label class="col-sm-2 col-form-label"> Contraseña </label>
+      <input
+        name="password"
+        type="password"
+        placeholder="Contraseña"
+        class="form-control c-black"
+        required
+        ngModel
+      />
+    </div>
+    <div class="m-3 d-flex">
+      <button class="btn btn-primary m-3">Login</button>
+      <button class="btn btn-danger m-3">Logout</button>
+      <button (click)="consoleToken()" class="btn btn-primary m-3">
+        Comprobar estado
+      </button>
+    </div>
+  </form>
+</div>
