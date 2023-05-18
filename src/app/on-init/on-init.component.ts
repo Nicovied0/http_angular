@@ -10,7 +10,16 @@ import { Router } from '@angular/router'; // impoertar router para navegar entre
 export class OnInitComponent {
   constructor(private githubService: GithubService, private router: Router) { }
 
+  arrayDates: any = []
+
+
   ngOnInit() {
-    this.githubService.getReposEnOnInit().then(console.log)
+    this.githubService.getReposEnOnInit().then((results) => {
+      this.arrayDates = results
+      console.log(this.arrayDates)
+    }).catch((error) => {
+      console.error('Error al obtener los repositorios', error);
+    })
+
   }
 }
